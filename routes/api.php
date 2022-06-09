@@ -17,3 +17,5 @@ Route::post('/add_items', [AdminController::class, 'addItem']);
 Route::get('/items/{id?}', [AdminController::class, 'getAllItems']);
 
 
+Route::post('/add_category', [AdminController::class, 'addCategory']);
+
