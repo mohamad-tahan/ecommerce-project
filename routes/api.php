@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JWTController;
@@ -11,4 +12,8 @@ Route::group(['middleware' => 'api'], function($router) {
     Route::post('/refresh', [JWTController::class, 'refresh']);
     Route::post('/profile', [JWTController::class, 'profile']);
 });
+
+Route::post('/add_items', [AdminController::class, 'addItem']);
+Route::get('/items/{id?}', [AdminController::class, 'getAllItems']);
+
 
