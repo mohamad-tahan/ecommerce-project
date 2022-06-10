@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JWTController;
+use App\Http\Controllers\UserController;
 
 Route::group(['middleware' => 'api'], function($router) {
     Route::post('/register', [JWTController::class, 'register']);
@@ -18,4 +19,10 @@ Route::get('/items/{id?}', [AdminController::class, 'getAllItems']);
 
 
 Route::post('/add_category', [AdminController::class, 'addCategory']);
+Route::get('/categories/{id?}', [AdminController::class, 'getAllCategories']);
 
+
+Route::post('/add_favorites/{id?}', [UserController::class, 'addFavorites']);
+
+
+Route::get('/itemsbycategory/{id}', [AdminController::class, 'getItemsbyCategoryId']);
