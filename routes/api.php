@@ -22,7 +22,7 @@ Route::post('/add_category', [AdminController::class, 'addCategory']);
 Route::get('/categories/{id?}', [AdminController::class, 'getAllCategories']);
 
 
-Route::post('/add_favorites/{id?}', [UserController::class, 'addFavorites']);
+Route::post('/add_favorites', [UserController::class, 'addFavorites']);
 
 
 Route::get('/itemsbycategory/{id}', [AdminController::class, 'getItemsbyCategoryId']);
