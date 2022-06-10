@@ -19,7 +19,7 @@ class AdminController extends Controller
         $item->save();
         
         return response()->json([
-            "status" => "Success"
+            "status" => "Item Added"
         ], 200);
     }
 
@@ -48,4 +48,30 @@ class AdminController extends Controller
             "status" => "Category Saved"
         ], 200);
     }
+
+    public function getAllCategories($id = null){
+        if($id != null){
+            
+            $cats = Category::find($id);
+            
+        }else{
+            $cats = Category::all();
+        }
+        
+        return response()->json([
+            "status" => "Success",
+            "Categories" => $cats
+        ], 200);
+    }
+
+    public function getItemsbyCategoryId(Request $request,$id){
+        $items = Item::where("category_id", $id)->get();
+        return response()->json([
+            "status" => "Success",
+            "Items" => $items
+        ], 200);
+    }
+
+    
+
 }
