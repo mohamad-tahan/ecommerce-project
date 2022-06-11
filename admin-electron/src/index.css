@@ -1,21 +1,33 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #e4e4e4;
+  background-color: white;
+  
 }
 
 .header {
-  display: flex;
-  justify-content:center;
+
   height: 70px;
   background-color: white;
   padding: 5px 10px;
   padding-right: 40px;
 }
 
+.header img {
+  height: 90px;
+  padding-bottom: 10px;
+}
 
+.hero p {
+  color: rgb(133, 27, 27);
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
 
 .header a {
+  display: flex;
+  justify-content:space-between;
   color: black;
   padding: 12px;
   text-decoration: none;
@@ -41,115 +53,6 @@ body {
   align-items: center;
 }
 
-.dropbtn {
-  background-color: burlywood;
-  color: black;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 220px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  font-weight: lighter;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  background-color: rgb(224, 224, 220);
-}
-
-.dropdown-content a:hover {
-  background-color: #fae69b;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #fae69b;
-}
-
-.dropdown-content a:hover {
-  background-color: #fae69b;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #fae69b;
-}
-
-.sidenav {
-  height: 1000px;
-  margin-top: 100px;
-  width: 200px;
-  position:absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: burlywood;
-  overflow-x: hidden;
-  padding-top: 20px;
-  
-  
-}
-
-
-/* Style the sidenav links and the dropdown button */
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: black;
-  display: block;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-  margin-top: 50px;
-  padding-left: 40px;
-  font-weight: bold;
-  
-  
-  
-}
-
-
-
-/* On mouse-over */
-
-.sidenav a:hover,
-.dropdown-btn:hover {
-  color: #f1f1f1;
-}
-
-
 /* Main content */
 
 .main {
@@ -164,8 +67,10 @@ body {
 /* Add an active class to the active dropdown button */
 
 .active {
-  background-color: rgb(161, 139, 109);
+  background-color: black;
   color: white;
+  text-align: center;
+  align-items: center;
 }
 
 
@@ -187,6 +92,177 @@ body {
 
 
 /* Some media queries for responsiveness */
+
+
+
+
+.add {
+  position: relative;
+  height: 400px;
+  width: 300px;
+  padding: 60px 60px;
+ background-color: black;
+  background-size: cover;
+  box-shadow: 0px 30px 60px -5px #000;
+  border-radius: 10%;
+  
+}
+
+.addCategory {
+  padding-top: 80px;
+}
+.addItem{
+  padding-top: 40px;
+}
+
+.active {
+  border-bottom: 2px solid red;
+}
+
+.nonactive {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+  padding-left: 12px;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 100;
+  
+}
+
+
+h2:first-child {
+  padding-left: 0px;
+}
+
+span {
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.4; 
+  display: inline-block;
+  position: relative;
+  top: -45px;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  color: white;
+}
+
+.text {
+  border: none;
+  width: 89%;
+  padding: 10px 20px;
+  display: block;
+  height: 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0);
+  overflow: hidden;
+  margin-top: 15px;
+  transition: all 0.5s ease-in-out;
+}
+.categ{
+  border: none;
+  width: 89%;
+  padding: 10px 20px;
+  display: block;
+  height: 15px;
+  border-radius: 20px;
+  background: rgba(126, 87, 87, 0.952);
+  border: 2px solid rgba(255, 255, 255, 0);
+
+
+}
+
+.text:focus {
+  outline: 0;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0);
+}
+
+.text:focus + span {
+  opacity: 0.6;
+}
+
+input[type="text"],input[type="file"]
+{
+  font-family: 'Montserrat', sans-serif;
+  color: red;
+}
+
+
+
+input {
+  display: inline-block;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+h2,
+span,
+.custom-checkbox {
+  margin-left: 20px;
+}
+
+
+
+.custom-checkbox {
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  top: 6px;
+}
+
+
+
+label {
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.addCat {
+  background-color: red;
+  color: #FFF;
+  width: 100%;
+  padding: 10px 20px;
+  display: block;
+  height: 39px;
+  border-radius: 20px;
+  margin-top: 30px;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  text-transform: uppercase;
+}
+
+.addCat:hover {
+  background: #4082f5;
+  box-shadow: 0px 4px 35px -5px #4082f5;
+  cursor: pointer;
+}
+
+.addCat:focus {
+  outline: none;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+
+  
+  
+}
+
+
+
 
 @media screen and (max-height: 450px) {
   .sidenav {
