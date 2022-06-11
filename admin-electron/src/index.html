@@ -7,26 +7,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
     <div class="header">
 
         <div class="hero">
-
-           
-                <a class="#" href="main_page.php">Add Category</a>
-                <a class="#" href="main_page.php">Add Item</a>
-                <a class="#" href="index.html" style="color: red;">Log Out</a>
-            
+            <img src="assets/car.jpg" alt="" height="100px">
+            <p>Admin Panel</p>
+                <a class="logout" href="index.html" style="color: red;">Log Out</a>  
         </div>
 
-
-
+        
     </div>
+    <div class="container">
+<div class="add">
+  <h2 class="active">Category</h2>
+  <form class = "addCategory">
+    <input type="text" class="text" name="name" placeholder="">
+     <span>Category Name</span> 
+    <br>
+    <button class="addCat">Add Category</button>
+  </form>
+
+</div>
+
+<div class="add">
+    <h2 class="active">Item</h2>
+    <form class="addItem">
+      <input type="text" class="text" name="name" placeholder="">
+       <span>Item Name</span> 
+       <input type="text" class="text" name="price" placeholder="">
+       <span>Price</span> 
+       <br>
+       <label for="cars">Choose a car:</label>
+
+<select class="categ" id="cars">
+  <option value="saab">BMW</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+<span>Category</span> 
+       <input type="file" class="file" name="image" placeholder="">
+       <span>Image</span> 
+    
+      <button class="addCat">Add Item</button>
+    </form>
+  
+  </div>
+</div>
 
 
 </body>
