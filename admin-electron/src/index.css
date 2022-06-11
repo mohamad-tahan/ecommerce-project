@@ -262,28 +262,14 @@ label {
 }
 
 
-
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-      padding-top: 15px;
-  }
-  .sidenav a {
-      font-size: 18px;
-  }
-}
-
 @media screen and (max-width: 800px) {
   .header {
       display: block;
   }
-  img {
-      height: 150px;
-      width: 300px;
-  }
-  .header-right {
+
+  .container {
       display: flex;
-      flex-direction: row;
-      max-width: min-content;
+      flex-direction: column;
+    
   }
 }
