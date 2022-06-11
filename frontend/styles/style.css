@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../assets/foodbg1.jpg") no-repeat;
+    height: 100vh;
+    font-family: sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+/*Login and Signup Boxes*/
+
+.loginBox,
+.signupBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    min-height: 400px;
+    background: rgb(188, 187, 187);
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+
+
+h2 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: brown;
+    text-align: center
+}
+
+.loginBox input,
+.signupBox input,
+button {
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.loginBox input[type="text"],
+.loginBox input[type="password"],
+.signupBox input[type="text"],
+.signupBox input[type="password"] {
+    border: none;
+    border-bottom: 2px solid #262626;
+    outline: none;
+    height: 30px;
+    color: rgb(31, 23, 23);
+    background: transparent;
+    font-size: 20px;
+    padding-left: 20px;
+    box-sizing: border-box
+}
+
+.loginBox input[type="text"]:hover,
+.loginBox input[type="password"]:hover,
+.signupBox input[type="text"]:hover,
+.signupBox input[type="password"]:hover {
+    color: bisque;
+    border: 1px solid rgb(131, 66, 66);
+    ;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.426), 0 0 10px rgba(229, 99, 63, 0.2), 0 0 15px rgba(255, 77, 0, 0.1), 0 2px 0 black
+}
+
+.loginBox input[type="text"]:focus,
+.loginBox input[type="password"]:focus,
+.signupBox input[type="text"]:focus,
+.signupBox input[type="password"]:focus {
+    border-bottom: 2px solid rgb(131, 66, 66);
+}
+
+.signup,
+.back {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.signupBox {
+    display: none;
+}
+
+.inputBox {
+    position: relative;
+}
+
+.inputBox span {
+    position: absolute;
+    top: 10px;
+    color: #262626;
+}
+
+button {
+    border: none;
+    outline: none;
+    height: 35px;
+    font-size: 20px;
+    background: brown;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+p {
+    color: brown;
+    text-align: center;
+}
+
+.no_account {
+    color: black;
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+label {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-size: cover;
+        position: center;
+    }
+}
