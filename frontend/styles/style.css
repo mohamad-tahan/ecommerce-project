@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    background: url("../assets/foodbg1.jpg") no-repeat;
     height: 100vh;
     font-family: sans-serif;
     background-size: cover;
@@ -9,6 +8,59 @@ body {
     background-position: center;
     overflow: hidden;
 }
+
+
+.header {
+   
+    height: 70px;
+    background-color: white;
+    padding: 5px 10px;
+    padding-right: 40px;
+  }
+  
+  .header img {
+    height: 90px;
+    padding-bottom: 10px;
+  }
+  .hero{
+    display: flex;
+    justify-content:space-between;
+  }
+  .header .hero p {
+    padding-bottom: 20px;
+    color: rgb(133, 27, 27);
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  
+  .header a {
+  
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+    
+  }
+  
+  .header a:hover {
+    background-color: #fae69b;
+    color: black;
+  }
+  
+  .header a.active {
+    background-color: rgb(255, 98, 30);
+    color: white;
+  }
+  
+  .links {
+      padding-top: 40px;
+   
+   
+  }
 /*Login and Signup Boxes*/
 
 .loginBox,
@@ -107,10 +159,6 @@ button {
     cursor: pointer;
 }
 
-p {
-    color: brown;
-    text-align: center;
-}
 
 .no_account {
     color: black;
