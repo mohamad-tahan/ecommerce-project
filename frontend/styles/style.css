@@ -26,12 +26,13 @@ body {
     display: flex;
     justify-content:space-between;
   }
-  .header .hero p {
+.ss , #back{
     padding-bottom: 20px;
     color: rgb(133, 27, 27);
-    font-size: 35px;
+    font-size: 15px;
     letter-spacing: 1px;
     font-weight: bold;
+    text-align: center;
   }
   
   .header a {
@@ -80,18 +81,19 @@ body {
 
 
 
-h2 {
-    margin: 0;
-    padding: 0 0 20px;
-    color: brown;
-    text-align: center
+.title {
+color: rgb(133, 27, 27);
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .loginBox input,
 .signupBox input,
 button {
     width: 100%;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .loginBox input[type="text"],
@@ -106,7 +108,7 @@ button {
     background: transparent;
     font-size: 20px;
     padding-left: 20px;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .loginBox input[type="text"]:hover,
@@ -164,14 +166,48 @@ button {
     color: black;
 }
 
-h1 {
-    color: brown;
-    text-align: center;
-}
+
 
 label {
     font-size: 18px;
 }
+
+
+#items{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-items:center;
+justify-content: center;
+border-top: 2px solid black;
+
+}
+
+#items div {
+    width: 100px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid black;
+}
+#items img {
+    width: 80px;
+}
+
+
+
+
+#allitems h1 {
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+  }
+
+
+  #allitems img {
+    max-width: 300px;
+    border: 6px solid #fff;
+    border-radius: 150px;
+  }
+
 
 @media screen and (max-width: 900px) {
     body {
