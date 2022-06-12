@@ -9,10 +9,11 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
   public function addFavorites(Request $request){
-    if (Auth::check()){
-
+    
+      $user = Auth::user();
+      $user_id = $user->id;
       $fav = new Favorite();
-      $fav->user_id = $request->user_id;
+      $fav->user_id = $user_id;
       $fav->item_id = $request->item_id;
     
       
@@ -23,14 +24,16 @@ class UserController extends Controller
           "favorites" => $fav
       ], 200);
       
-    }
+   
 
-    return response()->json([
-      "status" => "You are not logged in"
+  //   return response()->json([
+  //     "status" => "You are not logged in"
      
-  ], 200);
+  // ], 200);
   
 }
+
+
 
 
 
