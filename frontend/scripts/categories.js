@@ -4,6 +4,9 @@ function getCategories(){
     axios({
         method: "GET",
         url: "http://127.0.0.1:8000/api/v1/admin/categories",
+        headers : {
+          "Authorization": "Bearer " + localStorage.getItem("token")
+      }
     }) 
     .then(function(response) {
         
