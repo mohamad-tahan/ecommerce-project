@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Item;
 use Illuminate\Http\Request;
+use App\Models\Favorite;
 
 class AdminController extends Controller
 {
@@ -72,6 +73,22 @@ class AdminController extends Controller
         ], 200);
     }
 
+
+    public function getAllFavorites($id = null){
+        if($id != null){
+            
+            $favs = Favorite::find($id);
+            
+        }else{
+            $favs = Favorite::all();
+        }
+        
+        return response()->json([
+            "status" => "Success",
+            "Categories" => $favs
+        ], 200);
+      }
+      
     
 
 }
