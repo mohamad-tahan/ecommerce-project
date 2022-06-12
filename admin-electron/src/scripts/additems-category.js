@@ -2,6 +2,9 @@ window.onload = function () {
     axios({
         method: "GET",
         url: "http://127.0.0.1:8000/api/v1/admin/categories",
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
     }) 
     .then(function(response) {
         
@@ -40,16 +43,23 @@ window.onload = function () {
       let price = document.getElementById("price").value;
       let category= cars.options[cars.selectedIndex].id;
       console.log(category);
-      const image = document.getElementById("image");
+
+     
+    var imagefile = document.querySelector('#image');
+
+
+
+     // const image = document.getElementById("image");
       //console.log(image);
-      image.addEventListener("change", getImage);
+    //  image.addEventListener("change", getImage);
 
       /*Append the variables set by the user to the Form Data to send them to url*/
       let data = new FormData();
       data.append("name", name);
       data.append("price", price);
       data.append("category_id", category);
-      data.append("image", image);
+      data.append("image", imagefile.files[0]);
+      console.log(imagefile.files[0]);
 
       axios({
         method: "post",
@@ -64,17 +74,7 @@ window.onload = function () {
         }
       });
 
-      function getImage() {
-        var file = document.querySelector("input[type=file]")["files"][0];
-        var reader = new FileReader();
-        console.log("next");
-        reader.onload = function () {
-          base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
-          imageBase64Stringsep = base64String;
-          console.log(base64String);
-        };
-        reader.readAsDataURL(file);
-      }
+  
     });
   }
   getItems();
