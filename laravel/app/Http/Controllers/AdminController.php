@@ -68,7 +68,7 @@ class AdminController extends Controller
         $items = Item::where("category_id", $id)->get();
         return response()->json([
             "status" => "Success",
-            "Items" => $items
+            "items" => $items
         ], 200);
     }
 
