@@ -69,24 +69,15 @@ function loginToMain() {
         method: "post",
         url: "http://127.0.0.1:8000/api/login",
         data: data,
-        headers: { Authorization: "Bearer" + 'access_token'}
+        
     }).then(function(response) {
         console.log(response);
         console.log(response.data);
         console.log("logged in");
         alert("Welcome!")
-        location.href ="main.html";
-       
-        /*When logged in check if he's an admin or user and direct him to the next page accordingly*/
-        
-        // if (type == 1) {
-        //     location.href =
-        //         "http://localhost/ZomatoProject_FrontEnd/view_users.php";
-        // } else {
-        //     location.href =
-        //         "http://localhost/ZomatoProject_FrontEnd/main_page.php";
-        // }
-        localStorage.setItem("id", response.data.id);
+
+       localStorage.setItem("access_token", response.data["access_token"]);
+       location.href ="main.html";
     },
     
     ).catch((err) => alert("You are not Authorized. Please Sign up"));
