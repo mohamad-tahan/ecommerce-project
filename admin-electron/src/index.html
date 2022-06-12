@@ -28,10 +28,10 @@
 <div class="add">
   <h2 class="active">Category</h2>
   <form class = "addCategory">
-    <input type="text" class="text" name="name" placeholder="">
+    <input type="text" class="text" name="name" id="nameCat" placeholder="">
      <span>Category Name</span> 
     <br>
-    <button class="addCat">Add Category</button>
+    <button class="addCat" id="addCategory">Add Category</button>
   </form>
 
 </div>
@@ -39,29 +39,41 @@
 <div class="add">
     <h2 class="active">Item</h2>
     <form class="addItem">
-      <input type="text" class="text" name="name" placeholder="">
+      <input type="text" class="text" name="name" id ="name"placeholder="">
        <span>Item Name</span> 
-       <input type="text" class="text" name="price" placeholder="">
+       <input type="text" class="text" name="price" id = "price" placeholder="">
        <span>Price</span> 
        <br>
        <label for="cars">Choose a car:</label>
 
-<select class="categ" id="cars">
+<!-- <select class="categ" id="cars">
   <option value="saab">BMW</option>
   <option value="mercedes">Mercedes</option>
   <option value="audi">Audi</option>
 </select>
-<span>Category</span> 
-       <input type="file" class="file" name="image" placeholder="">
+<span>Category</span>  -->
+
+<div id="categories">
+  
+  <select class="categ" id="cars">
+      <option> Select Category</option>
+  </select>
+  
+
+</div>
+       <input type="file" class="files" name="files" id ="image" placeholder="">
        <span>Image</span> 
     
-      <button class="addCat">Add Item</button>
+      <button class="addCat" id="addItem">Add Item</button>
     </form>
   
   </div>
 </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="scripts/additems-category.js"></script>
+<script src="scripts/addCategory.js"></script>
 </body>
 
 </html>
