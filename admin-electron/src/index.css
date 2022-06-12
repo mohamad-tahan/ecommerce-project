@@ -168,14 +168,19 @@ span {
   border: none;
   width: 89%;
   padding: 10px 20px;
-  display: block;
-  height: 15px;
+
+ 
   border-radius: 20px;
-  background: rgba(126, 87, 87, 0.952);
-  border: 2px solid rgba(255, 255, 255, 0);
+  
+  border: 2px solid rgba(215, 174, 174, 0.341);
+
 
 
 }
+
+/* #categories{
+  margin-bottom: 80px;
+} */
 
 .text:focus {
   outline: 0;
@@ -192,6 +197,10 @@ input[type="text"],input[type="file"]
 {
   font-family: 'Montserrat', sans-serif;
   color: red;
+}
+
+input[type="file"]{
+  margin-top: 20px;
 }
 
 
