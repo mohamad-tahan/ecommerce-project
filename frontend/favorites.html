@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Sale</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="header">
+
+        <div class="hero">
+            <img src="../admin-electron/src/assets/car.jpg" alt="" height="100px">
+            <p class="title">Auto Sale</p>
+            <div class="links">
+            <a class="logout"  id = "home" href="main.html" style="color: black;">Home</a>  
+            <a class="logout" href="favorites.html" style="color: black;">Favorites</a>  
+            <a class="logout" href="signin_signup.html" style="color: red;">Login</a> 
+            
+                <a class="logout" href="index.html" style="color: red;">Log Out</a>  
+            </div>
+        </div>
+
+        
+    </div>
+
+    <br><br><br>
+
+    <div id="view" >
+        <h3>Favorites</h3>
+    
+    
+      
+    
+        <table id = "tab" class="tab">
+          <tr>
+            <th id="id"> Id</th>
+            <th id="user_id">User Id</th>
+            <th id="item_id">Item id</th>
+            
+          </tr>
+    
+    </table>
+    
+      </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts/viewFavorites.js"></script>
+    
+    
+</body>
+</html>
