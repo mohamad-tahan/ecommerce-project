@@ -1,12 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+   
     font-family: sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    overflow: hidden;
+   
 }
 
 
@@ -87,11 +87,12 @@ color: rgb(133, 27, 27);
   letter-spacing: 1px;
   font-weight: bold;
   text-align: center;
+
 }
 
 .loginBox input,
 .signupBox input,
-button {
+.log {
     width: 100%;
     margin-bottom: 20px;
 }
@@ -150,7 +151,7 @@ button {
     color: #262626;
 }
 
-button {
+.log {
     border: none;
     outline: none;
     height: 35px;
@@ -181,19 +182,46 @@ justify-items:center;
 justify-content: center;
 border-top: 2px solid black;
 
+
 }
 
 #items div {
-    width: 100px;
+    width: 150px;
+   
     margin: 15px;
     padding: 10px;
     border: 1px solid black;
+   
 }
 #items img {
-    width: 80px;
+    width: 130px;
+    height: 100px;
+    
 }
 
+option{
+  text-align: center;
+  color: red;
 
+  font-size: 15px;
+  
+  
+
+}
+select{
+  text-align: center;
+  color: red;
+
+  font-size: 15px;
+ 
+ 
+}
+#categories{
+  color: red;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 30px;
+}
 
 
 #allitems h1 {
@@ -208,7 +236,60 @@ border-top: 2px solid black;
     border-radius: 150px;
   }
 
+  .fav{
+    color:orange;
+    border-radius: 20%;
+    background-color: white;
+    border: 1px solid #fae69b ;
+   float: right;
+   cursor: pointer;
+  }
 
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    position: relative;
+    margin-left: 160px;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 900px;
+    
+  }
+  
+  table,
+  td,
+  th,
+  tr {
+    border: 2px solid black;
+    text-align: center;
+  }
+  
+  td,
+  th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    width: 200px;
+  }
+  
+  th {
+    color: black;
+    width: 200px;
+  }
+  
+  tr:hover {
+    background-color: rgb(220, 190, 151);
+  }
+  
+  h3 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: black;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 40px;
+ 
+  }
 @media screen and (max-width: 900px) {
     body {
         background-size: cover;
