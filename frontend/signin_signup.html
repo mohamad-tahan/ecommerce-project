@@ -10,18 +10,19 @@
 
 <body>
     <!--Section 1 : Login Box-->
-
+   
+    
     <div class="loginBox" id="loginBox">
       
         <h2>LOG IN</h2>
         <div name="login" action="login.php" method="post">
             <div class="inputBox">
-                <label>Email</label> <input id="login_email" type="text" required="required">
-                <label>Password</label><input id="login_pass" type="password" required="required">
+                <label>Email</label> <input id="email-signin" type="text" required="required">
+                <label>Password</label><input id="password-signin" type="password" required="required">
             </div>
             <button value="Login" id="login">Login</button>
         </div>
-        <div>
+        <div class="ss">
             <p class="no_account">Don't have an account?</p>
             <p class="signup" id="register">SIGN UP</p>
         </div>
@@ -33,19 +34,21 @@
         <div name="signup">
             <h1>REGISTER</h1>
             <div class="inputBox">
-                <label>Name</label> <input id="full_name" type="text" name="fullname" required="required">
-                <label>Email</label> <input id="signup_email" type="text" name="Email" required="required">
-                <label>Password</label> <input id="signup_pass" type="password" name="Password" required="required">
+                <label>Name</label> <input id="name" type="text" name="name" required="required">
+                <label>Email</label> <input id="email-signup" type="text" name="email" required="required">
+                <label>Password</label> <input id="password-signup" type="password" name="Password" required="required">
+                <label>Confirm Password</label> <input id="password_confirmation" type="password" name="Password" required="required">
             </div>
             <button id="s" value="Sign Up">Sign Up</button>
         </div>
         <p class="back" id="back">Back</p>
 
     </div>
-
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="scripts/signin_signup.js"></script>
 
 </body>
