@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Sale</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="header">
+
+        <div class="hero">
+            <img src="../admin-electron/src/assets/car.jpg" alt="" height="100px">
+            <p class="title">Auto Sale</p>
+            <div class="links">
+            <a class="logout"  id = "home"style="color: red;">Home</a>  
+            <a class="logout" href="index.html" style="color: red;">Favorites</a>  
+            <a class="logout" href="signin_signup.html" style="color: red;">Login</a> 
+            
+                <a class="logout" href="index.html" style="color: red;">Log Out</a>  
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div>
+        <br><br>
+        <div id="categories">
+            <label for="cars">Category:</label>
+            <select class="categ" id="cars">
+                <option> Select Category</option>
+            </select>
+
+
+
+        </div>
+        
+    </div>
+
+    <br><br><br>
+
+    <div id="allitems">
+
+        <div id= "items">
+            
+
+        </div>
+       
+
+
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts/viewItems.js"></script> 
+    <script src="scripts/categories.js"></script> 
+    <script src="scripts/signin_signup.js"></script> 
+</body>
+</html>
