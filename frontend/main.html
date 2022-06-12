@@ -14,11 +14,11 @@
             <img src="../admin-electron/src/assets/car.jpg" alt="" height="100px">
             <p class="title">Auto Sale</p>
             <div class="links">
-            <a class="logout"  id = "home"style="color: red;">Home</a>  
-            <a class="logout" href="index.html" style="color: red;">Favorites</a>  
+            <a class="logout"  id = "home" style="color: black;">Home</a>  
+            <a class="logout" href="favorites.html" style="color: black;">Favorites</a>  
             <a class="logout" href="signin_signup.html" style="color: red;">Login</a> 
             
-                <a class="logout" href="index.html" style="color: red;">Log Out</a>  
+                <a id="logout" class="logout" href="logout.html" style="color: red;">Log Out</a>  
             </div>
         </div>
 
@@ -28,7 +28,7 @@
     <div>
         <br><br>
         <div id="categories">
-            <label for="cars">Category:</label>
+            <label for="cars">Categories:</label>
             <select class="categ" id="cars">
                 <option> Select Category</option>
             </select>
@@ -39,11 +39,11 @@
         
     </div>
 
-    <br><br><br>
+    <br>
 
     <div id="allitems">
 
-        <div id= "items">
+        <div id= "items" class="items">
             
 
         </div>
@@ -57,5 +57,8 @@
     <script src="scripts/viewItems.js"></script> 
     <script src="scripts/categories.js"></script> 
     <script src="scripts/signin_signup.js"></script> 
+    <script src="scripts/addFavorites.js"></script> 
+    <script src="scripts/logout.js"></script>
+    
 </body>
 </html>
