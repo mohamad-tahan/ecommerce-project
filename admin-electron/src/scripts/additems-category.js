@@ -33,22 +33,47 @@ window.onload = function () {
 
   console.log("hello");
 
+  var imagefile = document.getElementById("image");
+  let base64String = "";
+  imagefile.addEventListener("change", getImage);
+
+  
+
+  function getImage() {
+    var file = document.querySelector('input[type=file]')['files'][0];
+    var reader = new FileReader();
+    console.log("next");         
+    reader.onload = function () {
+        base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
+        imageBase64Stringsep = base64String;
+        console.log(base64String);
+    }
+    reader.readAsDataURL(file);
+}
+
   function getItems() {
+
+
     let add_item = document.getElementById("addItem");
     add_item.addEventListener("click", function (e) {
       e.preventDefault();
       /*Declaring variables*/
-      let base64String = "";
+    
       let name = document.getElementById("name").value;
       let price = document.getElementById("price").value;
       let category= cars.options[cars.selectedIndex].id;
       console.log(category);
 
      
-    var imagefile = document.querySelector('#image');
+  
+    console.log(imagefile);
 
 
 
+  
+
+   
+   
      // const image = document.getElementById("image");
       //console.log(image);
     //  image.addEventListener("change", getImage);
@@ -58,8 +83,8 @@ window.onload = function () {
       data.append("name", name);
       data.append("price", price);
       data.append("category_id", category);
-      data.append("image", imagefile.files[0]);
-      console.log(imagefile.files[0]);
+      data.append("image", base64String);
+      console.log(base64String);
 
       axios({
         method: "post",
@@ -80,3 +105,5 @@ window.onload = function () {
   getItems();
 
 }
+
+
