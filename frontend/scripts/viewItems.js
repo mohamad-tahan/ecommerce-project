@@ -33,7 +33,8 @@ window.onload = function () {
       favButton.setAttribute("class", "fav");
 
       itemName.innerText = "name: " + name;
-      itemImg.src = "./assets/car1.jpg";
+      itemImg.src = "data:image/png;base64,"+ image;
+      console.log(itemImg);
       console.log(itemImg.src);
       console.log(itemImg.src);
       console.log(image);
@@ -119,7 +120,7 @@ window.onload = function () {
         favButton.setAttribute("class", "fav");
 
         itemName.innerText = "name: " + name;
-        itemImg.src = "./assets/car1.jpg";
+        itemImg.src ="data:image/png;base64,"+ image;
         console.log(itemImg);
         console.log(image);
         itemPrice.innerText = "price: " + price;
