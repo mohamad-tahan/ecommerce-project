@@ -20,6 +20,7 @@ Route::group(['prefix' => 'v1'], function(){
     Route::group(['prefix' => 'user'], function(){
         Route::group(['middleware' => 'role.user'], function(){
         Route::post('/add_favorites', [UserController::class, 'addFavorites']);
+        
         });
     });
 
@@ -30,6 +31,7 @@ Route::group(['prefix' => 'v1'], function(){
             Route::post('/add_category', [AdminController::class, 'addCategory']);
             Route::get('/categories/{id?}', [AdminController::class, 'getAllCategories']);  
             Route::get('/itemsbycategory/{id}', [AdminController::class, 'getItemsbyCategoryId']);
+            Route::get('/favorites/{id?}', [AdminController::class, 'getAllFavorites']);
         });
     });
 
