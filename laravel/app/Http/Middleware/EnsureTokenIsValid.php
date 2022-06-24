@@ -18,11 +18,12 @@ class EnsureTokenIsValid
     public function handle(Request $request, Closure $next)
     {
         $user = Auth::user();
-        if($user ){
+        if($user){
             return $next($request);
         }
 
         return redirect(route("notFound"));
         
     }
+
 }

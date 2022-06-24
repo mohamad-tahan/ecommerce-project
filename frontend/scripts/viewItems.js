@@ -1,6 +1,6 @@
 window.onload = function () {
   let headers = {};
-        headers.Authorization = "Bearer " + localStorage.getItem("token");
+        headers.Authorization = "Bearer " + localStorage.getItem("access_token");
   axios({
 
     method: "GET",
@@ -34,10 +34,10 @@ window.onload = function () {
 
       itemName.innerText = "name: " + name;
       itemImg.src = "data:image/png;base64,"+ image;
-      console.log(itemImg);
-      console.log(itemImg.src);
-      console.log(itemImg.src);
-      console.log(image);
+     // console.log(itemImg);
+     // console.log(itemImg.src);
+      //console.log(itemImg.src);
+      //console.log(image);
 
       itemPrice.innerText = "price: " + price;
       favButton.innerHTML = `&#11088;` + "Favorites";
@@ -59,7 +59,7 @@ window.onload = function () {
         data.append("item_id", id);
         console.log(data);
         let headers = {};
-        headers.Authorization = "Bearer " + localStorage.getItem("token");
+        headers.Authorization = "Bearer " + localStorage.getItem("access_token");
         axios({
           method: "post",
           url: "http://127.0.0.1:8000/api/v1/user/add_favorites",
@@ -91,7 +91,7 @@ window.onload = function () {
       method: "GET",
       url: "http://127.0.0.1:8000/api/v1/admin/itemsbycategory/" + `${ids}`,
       headers : {
-        "Authorization": "Bearer " + localStorage.getItem("token")
+        "Authorization": "Bearer " + localStorage.getItem("access_token")
     }
     }).then(function (response) {
       const itemDiv = document.getElementById("items");
@@ -121,8 +121,8 @@ window.onload = function () {
 
         itemName.innerText = "name: " + name;
         itemImg.src ="data:image/png;base64,"+ image;
-        console.log(itemImg);
-        console.log(image);
+   //     console.log(itemImg);
+       // console.log(image);
         itemPrice.innerText = "price: " + price;
         favButton.innerHTML = `&#11088;` + "Favorites";
 

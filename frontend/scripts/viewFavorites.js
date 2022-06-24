@@ -3,7 +3,7 @@ function viewFavorites() {
     method: "GET",
     url: "http://127.0.0.1:8000/api/v1/admin/favorites",
     headers : {
-        "Authorization": "Bearer " + localStorage.getItem("token")
+        "Authorization": "Bearer " + localStorage.getItem("access_token")
     }
   }).then(function (response) {
       console.log(response);
